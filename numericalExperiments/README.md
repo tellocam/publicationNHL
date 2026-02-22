@@ -1,6 +1,6 @@
 # Numerical Experiments — Nitsche Hodge-Laplace Optimal Error Estimates
 
-This directory contains the Python scripts that reproduce the five numerical
+This directory contains the Python scripts that reproduce the four numerical
 tables in the paper:
 
 > **Optimal error estimates for the Nitsche Hodge-Laplace method**
@@ -62,7 +62,6 @@ python table1_poincare_convex.py
 python table2_poincare_h_independence.py
 python table3_galerkin_lp_stability.py
 python table4_poincare_nonconvex.py
-python table5_comparison.py
 ```
 
 ---
@@ -72,12 +71,11 @@ python table5_comparison.py
 | File | Description |
 |------|-------------|
 | `shared.py` | Shared utilities: mesh creation, L^p norm computation, power-law fitting, table formatters |
-| `run_all.py` | Runner: executes all five table scripts in sequence |
+| `run_all.py` | Runner: executes all four table scripts in sequence |
 | `table1_poincare_convex.py` | Table 1 |
 | `table2_poincare_h_independence.py` | Table 2 |
 | `table3_galerkin_lp_stability.py` | Table 3 |
 | `table4_poincare_nonconvex.py` | Table 4 |
-| `table5_comparison.py` | Table 5 |
 
 ---
 
@@ -105,11 +103,6 @@ Compares the unit cube (convex reference), a 3D L-shaped domain (edge
 singularity), and the Fichera corner (vertex singularity) at h = 0.2.
 All domains show |alpha| < 0.1, providing numerical evidence that the
 p-independence result extends beyond convex Lipschitz domains.
-
-**Table 5** — Comparison with prior convergence rate results.
-A plain-text reproduction of the error bound comparison table
-(remark:comparison in the paper). No NGSolve computation is needed;
-this script only formats and prints the table.
 
 ---
 

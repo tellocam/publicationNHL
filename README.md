@@ -5,7 +5,7 @@ This repository is the companion to the paper:
 > **Improved A Priori Error Estimates for the Nitsche Hodge-Laplacian**
 > Camilo Tello Fachin, Wouter Tonnon, Enrico Zampa (2025)
 
-It contains two independent components: Python scripts that reproduce the five
+It contains two independent components: Python scripts that reproduce the four
 numerical tables in the paper, and a Lean 4 formalization of the main proof
 argument chain.
 
@@ -23,15 +23,14 @@ argument chain.
 
 ```
 publicationNHL/
-├── numericalExperiments/     # Python scripts reproducing Tables 1–5
+├── numericalExperiments/     # Python scripts reproducing Tables 1–4
 │   ├── pyproject.toml        # Package metadata and dependencies
 │   ├── shared.py             # Shared utilities (mesh, Lp norms, table formatters)
-│   ├── run_all.py            # Runner: executes all five table scripts
+│   ├── run_all.py            # Runner: executes all four table scripts
 │   ├── table1_poincare_convex.py
 │   ├── table2_poincare_h_independence.py
 │   ├── table3_galerkin_lp_stability.py
-│   ├── table4_poincare_nonconvex.py
-│   └── table5_comparison.py
+│   └── table4_poincare_nonconvex.py
 └── formalization/            # Lean 4 formalization of Theorem 4.1 and Corollary 4.2
     ├── lakefile.toml         # Lake build configuration
     ├── lean-toolchain        # Lean version pin (leanprover/lean4:v4.27.0)
@@ -99,7 +98,7 @@ pip install ngsolve numpy scipy
 
 ### Running the experiments
 
-Run all five tables in sequence:
+Run all four tables in sequence:
 
 ```bash
 cd numericalExperiments
@@ -117,7 +116,6 @@ python numericalExperiments/table1_poincare_convex.py
 python numericalExperiments/table2_poincare_h_independence.py
 python numericalExperiments/table3_galerkin_lp_stability.py
 python numericalExperiments/table4_poincare_nonconvex.py
-python numericalExperiments/table5_comparison.py
 ```
 
 ### Table Quick Reference
@@ -128,7 +126,6 @@ python numericalExperiments/table5_comparison.py
 | **Table 2** | h-independence of the discrete Poincare constant (k=1). Variation below 6% across six mesh sizes, demonstrating mesh-size independence. |
 | **Table 3** | Galerkin Lp stability for the curl-curl problem (k=2). Growth exponents alpha <= 0.001 across four mesh sizes and exponents p in {2,...,100}. |
 | **Table 4** | Poincare growth exponent on non-convex domains (unit cube, 3D L-shape, Fichera corner). All show |alpha| < 0.1, extending the p-independence result beyond convex domains. |
-| **Table 5** | Plain-text reproduction of the convergence rate comparison table (Remark in paper). No NGSolve computation required. |
 
 ### Reproducibility Notes
 

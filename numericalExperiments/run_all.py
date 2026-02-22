@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-run_all.py — Run all five numerical experiment tables in sequence.
+run_all.py — Run all numerical experiment tables in sequence.
 
 Each table script is imported and its main logic is invoked.
 Results are printed to stdout.
@@ -17,7 +17,6 @@ Tables
   Table 2 — h-independence of the discrete Poincaré constant (k=1)
   Table 3 — Galerkin L^p stability ratio (k=2, curl-curl)
   Table 4 — Poincaré constant on non-convex domains (cube, L-shaped, Fichera)
-  Table 5 — Comparison with prior convergence rate results
 """
 
 import importlib
@@ -52,7 +51,6 @@ def main() -> None:
         ("table2_poincare_h_independence", "Table 2 — h-independence of C_p"),
         ("table3_galerkin_lp_stability",   "Table 3 — Galerkin L^p stability (k=2)"),
         ("table4_poincare_nonconvex",      "Table 4 — Poincaré on non-convex domains"),
-        ("table5_comparison",              "Table 5 — Comparison with prior results"),
     ]
 
     total_start = time.perf_counter()
