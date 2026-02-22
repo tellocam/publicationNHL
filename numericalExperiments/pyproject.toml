@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nhl-numerical-experiments"
+version = "0.1.0"
+description = "Numerical experiments for: Optimal error estimates for the Nitsche Hodge-Laplace method"
+requires-python = ">=3.10"
+dependencies = [
+    "ngsolve",
+    "numpy",
+    "scipy",
+]
+
+[project.urls]
+Repository = "https://github.com/aramiko/nhl-numerical-experiments"
+
+[tool.hatch.build.targets.wheel]
+packages = ["numericalExperiments"]

@@ -1,0 +1,11 @@
+-- Root module: imports all Foundations submodules and the main theorem file.
+import NitscheHodgeLaplacian.Foundations.Domains
+import NitscheHodgeLaplacian.Foundations.Sobolev
+import NitscheHodgeLaplacian.Foundations.LpSpaces
+import NitscheHodgeLaplacian.Foundations.Embedding
+import NitscheHodgeLaplacian.Foundations.Trace
+import NitscheHodgeLaplacian.Foundations.WeakSolutions
+import NitscheHodgeLaplacian.Foundations.DifferentialForms
+import NitscheHodgeLaplacian.Foundations.BVSpace
+import NitscheHodgeLaplacian.Foundations.Discretization
+import NitscheHodgeLaplacian.Main

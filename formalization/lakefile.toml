@@ -1,0 +1,19 @@
+name = "NitscheHodgeLaplacian"
+version = "0.1.0"
+keywords = ["math", "pde", "nitsche", "hodge-laplacian", "feec"]
+description = "Lean 4 formalization of improved error estimates for the Nitsche Hodge-Laplacian (Tello Fachin, Tonnon, Zampa)"
+defaultTargets = ["NitscheHodgeLaplacian"]
+
+[leanOptions]
+pp.unicode.fun = true
+weak.relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+weak.maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.27.0"
+
+[[lean_lib]]
+name = "NitscheHodgeLaplacian"

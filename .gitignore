@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Lean
+.lake/
+lake-packages/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated
+numericalExperiments/results/
+formalization/graphs/*.pdf

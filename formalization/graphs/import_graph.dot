@@ -1,0 +1,172 @@
+digraph NitscheHodgeLaplacian_imports {
+    // Graph-level attributes
+    graph [
+        label = "NitscheHodgeLaplacian — Module Import Graph\n(Lean 4 / Mathlib v4.27.0)"
+        labelloc = "t"
+        fontsize = 16
+        fontname = "Helvetica"
+        rankdir = "BT"
+        bgcolor = "white"
+        splines = "ortho"
+        nodesep = 0.5
+        ranksep = 0.8
+    ]
+
+    node [
+        shape = "box"
+        style = "filled"
+        fontname = "Helvetica"
+        fontsize = 11
+    ]
+
+    edge [
+        color = "#555555"
+        arrowsize = 0.7
+    ]
+
+    // -----------------------------------------------------------------------
+    // External dependency (Mathlib)
+    // -----------------------------------------------------------------------
+    Mathlib [
+        label = "Mathlib\n(v4.27.0)"
+        fillcolor = "#d0d0d0"
+        style = "filled,dashed"
+        shape = "ellipse"
+        fontsize = 13
+    ]
+
+    // -----------------------------------------------------------------------
+    // Root module
+    // -----------------------------------------------------------------------
+    Root [
+        label = "NitscheHodgeLaplacian\n(root)"
+        fillcolor = "#1a1a2e"
+        fontcolor = "white"
+        style = "filled,bold"
+        fontsize = 13
+    ]
+
+    // -----------------------------------------------------------------------
+    // Main theorem file
+    // -----------------------------------------------------------------------
+    Main [
+        label = "Main\n(Theorems 4.1, Cor. 4.2)"
+        fillcolor = "#16213e"
+        fontcolor = "white"
+        style = "filled,bold"
+        fontsize = 12
+    ]
+
+    // -----------------------------------------------------------------------
+    // Foundations modules — grouped by dependency tier
+    // -----------------------------------------------------------------------
+
+    // Tier 1: no inter-Foundations deps
+    Domains [
+        label = "Foundations.Domains"
+        fillcolor = "#e8f4f8"
+    ]
+    WeakSolutions [
+        label = "Foundations.WeakSolutions"
+        fillcolor = "#e8f4f8"
+    ]
+
+    // Tier 2: depend on Domains only
+    Sobolev [
+        label = "Foundations.Sobolev"
+        fillcolor = "#cce5ff"
+    ]
+
+    // Tier 3: depend on Domains + Sobolev
+    LpSpaces [
+        label = "Foundations.LpSpaces"
+        fillcolor = "#b8daff"
+    ]
+    Trace [
+        label = "Foundations.Trace"
+        fillcolor = "#b8daff"
+    ]
+
+    // Tier 4: depend on Domains + Sobolev + LpSpaces
+    DifferentialForms [
+        label = "Foundations.DifferentialForms"
+        fillcolor = "#99c9ff"
+    ]
+    BVSpace [
+        label = "Foundations.BVSpace"
+        fillcolor = "#99c9ff"
+    ]
+
+    // Tier 5: depend on Sobolev + LpSpaces + DifferentialForms + Domains
+    Embedding [
+        label = "Foundations.Embedding"
+        fillcolor = "#70b0ff"
+    ]
+
+    // Tier 6: depend on Domains + DifferentialForms
+    Discretization [
+        label = "Foundations.Discretization"
+        fillcolor = "#4499ee"
+        fontcolor = "white"
+    ]
+
+    // -----------------------------------------------------------------------
+    // Edges: Mathlib usage (every module imports Mathlib.Tactic implicitly)
+    // Shown only for modules that explicitly list Mathlib imports in T8
+    // -----------------------------------------------------------------------
+    Domains        -> Mathlib
+    Sobolev        -> Mathlib
+    LpSpaces       -> Mathlib
+    DifferentialForms -> Mathlib
+    WeakSolutions  -> Mathlib
+    BVSpace        -> Mathlib
+    Discretization -> Mathlib
+    Main           -> Mathlib  [label = "Analysis.SpecialFunctions.Pow.Real" fontsize = 8]
+
+    // -----------------------------------------------------------------------
+    // Edges: inter-Foundations imports
+    // -----------------------------------------------------------------------
+    Sobolev           -> Domains
+    LpSpaces          -> Domains
+    LpSpaces          -> Sobolev
+    Trace             -> Sobolev
+    DifferentialForms -> Domains
+    DifferentialForms -> Sobolev
+    DifferentialForms -> LpSpaces
+    Embedding         -> Domains
+    Embedding         -> Sobolev
+    Embedding         -> LpSpaces
+    Embedding         -> DifferentialForms
+    BVSpace           -> Domains
+    BVSpace           -> LpSpaces
+    BVSpace           -> Sobolev
+    Discretization    -> Domains
+    Discretization    -> DifferentialForms
+
+    // -----------------------------------------------------------------------
+    // Edges: Main and Root
+    // -----------------------------------------------------------------------
+    Main -> Discretization
+
+    Root -> Domains
+    Root -> Sobolev
+    Root -> LpSpaces
+    Root -> Embedding
+    Root -> Trace
+    Root -> WeakSolutions
+    Root -> DifferentialForms
+    Root -> BVSpace
+    Root -> Discretization
+    Root -> Main
+
+    // -----------------------------------------------------------------------
+    // Rank hints for cleaner layout
+    // -----------------------------------------------------------------------
+    { rank = same; Domains; WeakSolutions }
+    { rank = same; Sobolev }
+    { rank = same; LpSpaces; Trace }
+    { rank = same; DifferentialForms; BVSpace }
+    { rank = same; Embedding; Discretization }
+    { rank = same; Main }
+    { rank = same; Root }
+}
