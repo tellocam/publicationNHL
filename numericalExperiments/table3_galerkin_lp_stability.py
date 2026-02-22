@@ -169,7 +169,7 @@ def compute_table3():
         print(f"    {mesh.ne} elements", flush=True)
 
         for label, v_CF in test_functions:
-            # Solve once per (h, test function) -- p-independent solve
+            # Solve once per (h, test function); this solve is p-independent
             curl_psi_CF = solve_galerkin_k2(mesh, v_CF)
 
             ratios = {}
