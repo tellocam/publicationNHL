@@ -4,7 +4,7 @@ This directory contains the Python scripts that reproduce the four numerical
 tables in the paper:
 
 > **Optimal error estimates for the Nitsche Hodge-Laplace method**
-> (submitted, 2025)
+> (submitted, 2026)
 
 The experiments confirm the discrete Poincaré inequalities, Galerkin L^p
 stability properties, and convergence rate improvements stated in the paper.

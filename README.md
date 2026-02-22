@@ -3,7 +3,7 @@
 This repository is the companion to the paper:
 
 > **Improved A Priori Error Estimates for the Nitsche Hodge-Laplacian**
-> Camilo Tello Fachin, Wouter Tonnon, Enrico Zampa (2025)
+> Camilo Tello Fachin, Wouter Tonnon, Enrico Zampa (2026)
 
 It contains two independent components: Python scripts that reproduce the four
 numerical tables in the paper, and a Lean 4 formalization of the main proof
@@ -210,10 +210,10 @@ brew install graphviz
 ## Citation
 
 ```bibtex
-@article{tellofachin2025nitsche,
+@article{tellofachin2026nitsche,
   title   = {Improved {A Priori} Error Estimates for the {Nitsche Hodge-Laplacian}},
   author  = {Tello Fachin, Camilo and Tonnon, Wouter and Zampa, Enrico},
-  year    = {2025},
+  year    = {2026},
   journal = {preprint},
   note    = {arXiv:XXXX.XXXXX}
 }

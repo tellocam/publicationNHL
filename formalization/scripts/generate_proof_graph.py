@@ -40,7 +40,7 @@ def build_dot() -> str:
         digraph proof_chain {
             // Graph attributes
             graph [
-                label = "NitscheHodgeLaplacian — Proof Chain Dependency Graph\\nMain.lean (Tello Fachin, Tonnon, Zampa 2025)"
+                label = "NitscheHodgeLaplacian — Proof Chain Dependency Graph\\nMain.lean (Tello Fachin, Tonnon, Zampa 2026)"
                 labelloc = "t"
                 fontsize = 16
                 fontname = "Helvetica"
