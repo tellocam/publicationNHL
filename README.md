@@ -13,9 +13,9 @@ argument chain.
 
 ## Authors
 
-- **Camilo Tello Fachin**
-- **Wouter Tonnon** — ETH Zurich
-- **Enrico Zampa** — University of Vienna
+- **Camilo Tello Fachin** (ZHAW Institute of Computational Physics, aramiko GmbH)
+- **Wouter Tonnon** (ETH Zurich)
+- **Enrico Zampa** (University of Vienna)
 
 ---
 
@@ -145,7 +145,7 @@ the logical structure of the proof: the BNB quasi-optimality framework, the
 key bound on the critical term (Lemma 3.3), and the Lp approximation bound
 (Corollary 3.7).
 
-**Design note**: the formalization uses axiomatized foundations — opaque types
+**Design note**: the formalization uses axiomatized foundations: opaque types
 and explicit axioms for Sobolev spaces, differential forms, triangulations, and
 FEEC spaces. This encodes the logical dependencies of the proof without fully
 constructing all PDE objects within Lean's type theory. Every declaration is
