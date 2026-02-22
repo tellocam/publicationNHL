@@ -207,20 +207,6 @@ brew install graphviz
 
 ---
 
-## Citation
-
-```bibtex
-@article{tellofachin2026nitsche,
-  title   = {Improved {A Priori} Error Estimates for the {Nitsche Hodge-Laplacian}},
-  author  = {Tello Fachin, Camilo and Tonnon, Wouter and Zampa, Enrico},
-  year    = {2026},
-  journal = {preprint},
-  note    = {arXiv:XXXX.XXXXX}
-}
-```
-
----
-
 ## License
 
 MIT License. See [LICENSE](LICENSE) for details.
